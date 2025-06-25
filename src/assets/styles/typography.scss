@@ -1,0 +1,253 @@
+@import '../utils/breakpoints.scss';
+
+@mixin base {
+    font-family: var(--main-font);
+}
+
+@mixin text {
+    font-family: var(--text-font);
+}
+
+@mixin error {
+    font-family: var(--error-font);
+}
+
+@mixin text-h1 {
+  @include base;
+  line-height: 115%;
+  font-weight: 600;
+
+  @include desktop-lg {
+    font-size: 6rem;
+  }
+
+  @include desktop {
+    font-size: 5rem;
+  }
+
+  @include tablet {
+    font-size: 3.6rem;
+  }
+
+  @include mobile {
+    font-size: 2.6rem;
+  }
+}
+
+@mixin text-h2 {
+  @include base;
+  line-height: 130%;
+  font-weight: 600;
+
+  @include desktop-lg {
+    font-size: 4.8rem;
+  }
+
+  @include desktop {
+    font-size: 3.4rem;
+  }
+
+  @include tablet {
+    font-size: 2.8rem;
+  }
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+@mixin text-title-l {
+  @include base;
+  line-height: 140%;
+  font-weight: 600;
+
+  @include desktop-lg {
+    font-size: 3.2rem;
+    line-height: 130%;
+  }
+
+  @include desktop {
+    font-size: 2.4rem;
+  }
+
+  @include tablet {
+    font-size: 2.2rem;
+  }
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
+}
+
+@mixin text-title-m {
+  @include base;
+  line-height: 140%;
+  font-weight: 600;
+
+  @include desktop-lg {
+    font-size: 2.4rem;
+    line-height: 150%;
+  }
+
+  @include desktop {
+    font-size: 2rem;
+  }
+
+  @include tablet {
+    font-size: 1.8rem;
+    line-height: 150%;
+  }
+
+  @include mobile {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin text-body-regular-l {
+  @include text;
+  line-height: 150%;
+  font-weight: 400;
+
+  @include desktop-lg {
+    font-size: 2rem;
+  }
+
+  @include desktop {
+    font-size: 1.6rem;
+  }
+
+  @include tablet {
+    font-size: 1.6rem;
+  }
+
+  @include mobile {
+    font-size: 1.4rem;
+  }
+}
+
+@mixin text-body-regular-m {
+  @include text;
+  line-height: 150%;
+  font-weight: 400;
+
+  @include desktop-lg {
+    font-size: 1.8rem;
+  }
+
+  @include desktop {
+    font-size: 1.4rem;
+  }
+
+  @include tablet {
+    font-size: 1.4rem;
+  }
+
+  @include mobile {
+    font-size: 1.4rem;
+  }
+}
+
+@mixin text-body-regular-s {
+  @include text;
+  line-height: 150%;
+  font-weight: 400;
+
+  @include desktop-lg {
+    font-size: 1.6rem;
+  }
+
+  @include desktop {
+    font-size: 1.4rem;
+  }
+
+  @include tablet {
+    font-size: 1.4rem;
+  }
+
+  @include mobile {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin text-caption-semibold-s {
+  @include text;
+  line-height: 150%;
+  font-weight: 600;
+
+  @include desktop-lg {
+    font-size: 1.2rem;
+  }
+
+  @include desktop {
+    font-size: 1.2rem;
+  }
+
+  @include tablet {
+    font-size: 1.2rem;
+  }
+
+  @include mobile {
+    font-size: 1rem;
+    line-height: auto;
+  }
+}
+
+@mixin text-btn-m {
+  @include text;
+  line-height: 150%;
+  font-weight: 450;
+
+  @include desktop-lg {
+    font-size: 1.8rem;
+    line-height: auto;
+  }
+
+  @include desktop {
+    font-size: 1.6rem;
+  }
+
+  @include tablet {
+    font-size: 1.6rem;
+  }
+
+  @include mobile {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin text-error-field {
+  @include text;
+  line-height: 150%;
+  font-weight: 400;
+
+  @include desktop-lg {
+    font-size: 1.2rem;
+  }
+
+  @include desktop {
+    font-size: 1.2rem;
+  }
+
+  @include tablet {
+    font-size: 1.2rem;
+    line-height: auto;
+  }
+}
+
+@mixin text-logo-description {
+  @include text;
+  line-height: 150%;
+  font-weight: 400;
+
+  @include desktop-lg {
+    font-size: 1.6rem;
+  }
+
+  @include desktop {
+    font-size: 1.2rem;
+  }
+
+  @include tablet {
+    font-size: 1.2rem;
+  }
+}

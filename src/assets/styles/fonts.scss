@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: 'LTSuperior';
+  src: url('@/assets/fonts/LTSuperior-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LTSuperior';
+  src: url('@/assets/fonts/LTSuperior-Medium.otf') format('opentype');
+  font-weight: 450;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LTSuperior';
+  src: url('@/assets/fonts/LTSuperior-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
