@@ -46,3 +46,7 @@ h2,
 .text-logo-description {
     @include text-logo-description;
 }
+
+.text-company-logo {
+    @include text-company-logo;
+}
