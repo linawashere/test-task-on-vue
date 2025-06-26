@@ -1,0 +1,59 @@
+@import './typography.scss';
+
+.button {
+    @include text-btn-m;
+    display: flex;
+    align-items: center;
+    border-radius: 1.6rem;
+    transition: all 0.3s ease;
+
+    &.size-lg {
+        gap: 3rem;
+        padding: 0.8rem 1.5rem 1.5rem 0.8rem;
+        height: 6rem;
+    }
+
+    &.size-sm {
+        gap: 2rem;
+        padding: 0.5rem 1.5rem 1rem 1.5rem;
+        height: 5rem;
+    }
+
+    &.primary-black {
+        background: var(--accent-primary-default);
+        color: var(--text-light-primary);
+
+        &:hover,
+        &:active {
+            background: var(--accent-primary-hover);
+        }
+    }
+
+    &.primary-light {
+        background: var(--accent-secondary-default);
+        color: var(--text-dark-primary);
+
+        &:hover,
+        &:active {
+            background: var(--accent-primary-hover);
+        }
+    }
+    
+    &.secondary-light {
+        border: 1px solid var(--stroke-dark-25);
+        color: var(--text-light-primary);
+
+        &:hover,
+        &:active {
+            color: var(--text-dark-primary);
+            border: none;
+            background: var(--accent-secondary-default);
+        }
+    }
+
+    &.secondary-black {
+        border: 1px solid var(--stroke-light-25);
+    }
+
+    
+}
