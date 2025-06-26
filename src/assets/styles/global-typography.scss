@@ -1,0 +1,48 @@
+@import './typography.scss';
+@import './breakpoints.scss';
+
+h1,
+.text-h1 {
+    @include text-h1;
+}
+
+h2,
+.text-h2 {
+    @include text-h2;
+}
+
+.text-title-l {
+    @include text-title-l;
+}
+
+.text-title-m {
+    @include text-title-m;
+}
+
+.text-body-regular-l {
+    @include text-body-regular-l;
+}
+
+.text-body-regular-m{
+    @include text-body-regular-m;
+}
+
+.text-body-regular-s {
+    @include text-body-regular-s;
+}
+
+.text-caption-semibold-s {
+    @include text-caption-semibold-s;
+}
+
+.text-btn-m {
+    @include text-btn-m;
+}
+
+.text-error-field {
+    @include text-error-field;
+}
+
+.text-logo-description {
+    @include text-logo-description;
+}
