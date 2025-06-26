@@ -12,6 +12,10 @@
     font-family: var(--error-font);
 }
 
+@mixin logo {
+  font-family: var(--logo-font);
+}
+
 @mixin text-h1 {
   @include base;
   line-height: 115%;
@@ -249,5 +253,33 @@
 
   @include tablet {
     font-size: 1.2rem;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+@mixin text-company-logo {
+  @include logo;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+
+  @include desktop-lg {
+    font-size: 1.6rem;
+  }
+
+  @include desktop {
+    font-size: 1.25rem;
+  }
+
+  @include tablet {
+    font-size: 1.6rem;
+  }
+
+  @include mobile {
+    font-size: 1.6rem;
   }
 }
