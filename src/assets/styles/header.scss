@@ -1,3 +1,27 @@
 .header {
     height: 8rem;
+    background: var(--bg-dark-dark);
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    color: var(--text-light-secondary);
+
+    .header__container {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__logo-description {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .header__company-logo {
+        display: flex;
+        gap: 1.8rem;
+        align-items: center;
+    }
 }
