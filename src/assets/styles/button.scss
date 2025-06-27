@@ -23,10 +23,10 @@
         background: var(--accent-primary-default);
         color: var(--text-light-primary);
 
-        &:hover,
-        &:active {
-            background: var(--accent-primary-hover);
-        }
+        // &:hover,
+        // &:active {
+        //     background: var(--accent-primary-hover);
+        // }
     }
 
     &.primary-light {
@@ -54,6 +54,4 @@
     &.secondary-black {
         border: 1px solid var(--stroke-light-25);
     }
-
-    
 }
