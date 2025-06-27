@@ -1,3 +1,6 @@
+@import './breakpoints.scss';
+@import './typography.scss';
+
 .header {
     height: 8rem;
     background: var(--bg-dark-dark);
@@ -11,17 +14,98 @@
     .header__container {
         display: flex;
         align-items: center;
+        justify-content: space-between
     }
 
     .header__logo-description {
         display: flex;
         gap: 3rem;
         align-items: center;
+
+        @include desktop {
+            gap: 1.5rem;
+        }
+
+        .header__logo-description__dealer-info {
+            width: 16rem;
+            display: flex;
+            flex-wrap: wrap;
+            @include desktop {
+                width: 11.8rem;
+            }
+            @include tablet {
+                width: 11.4rem;
+            }
+            @include mobile {
+                display: none;
+            }
+        }
     }
 
     .header__company-logo {
         display: flex;
         gap: 1.8rem;
         align-items: center;
+        width: 15.3rem;
+
+        @include desktop {
+            width: 12rem;
+        }
+    }
+
+    .header__info {
+        display: flex;
+        gap: 4rem;
+        @include desktop {
+            gap: 2.5rem;
+        }
+    }
+
+    .header__info-contacts {
+        display: flex;
+        gap: 4rem;
+
+        @include desktop {
+            gap: 3rem;
+        }
+
+        &__address,
+        &__tel {
+            @include upto-desktop {
+                display: none;
+            }
+        }
+    }
+
+    .header__info-stats {
+        display: flex;
+        gap: 2rem;
+
+        @include desktop {
+            gap: 1.5rem;
+        }
+    }
+
+    .header__stats-item {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        span {
+            @include text-caption-semibold-xxs;
+            display: flex;
+            align-items: center;
+            max-width: 2.1rem;
+            max-height: min(1.7rem, 17px);
+            background: var(--accent-secondary-hover);
+            padding: 0.2rem 0.4rem 0 0.4rem;
+            border-radius: 0.6rem;
+            color: var(--text-dark-primary);
+            text-align: center;
+        }
+
+        @include mobile-only {
+            display: none;
+        }
     }
 }

@@ -173,6 +173,20 @@
   }
 }
 
+@mixin text-body-medium-m {
+  @include text;
+  line-height: 150%;
+  font-weight: 450;
+
+  @include desktop-lg {
+    font-size: 1.8rem;
+  }
+
+  @include desktop {
+    font-size: 1.4rem;
+  }
+}
+
 @mixin text-caption-semibold-s {
   @include text;
   line-height: 150%;
@@ -193,6 +207,24 @@
   @include mobile {
     font-size: 1rem;
     line-height: auto;
+  }
+}
+
+@mixin text-caption-semibold-xxs {
+  @include text;
+  line-height: 150%;
+  font-weight: 600;
+
+  @include desktop-lg {
+    font-size: 1rem;
+  }
+
+  @include desktop {
+    font-size: 1rem;
+  }
+
+  @include tablet {
+    font-size: 1rem;
   }
 }
 
@@ -266,6 +298,7 @@
   line-height: 150%;
   letter-spacing: 2%;
   text-transform: uppercase;
+  font-size: 1.6rem;
 
   @include desktop-lg {
     font-size: 1.6rem;

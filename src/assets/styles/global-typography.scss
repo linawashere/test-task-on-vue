@@ -31,6 +31,10 @@ h2,
     @include text-body-regular-s;
 }
 
+.text-body-medium-m {
+    @include text-body-medium-m;
+}
+
 .text-caption-semibold-s {
     @include text-caption-semibold-s;
 }

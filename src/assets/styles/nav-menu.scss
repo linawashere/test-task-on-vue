@@ -9,6 +9,10 @@
         gap: 4rem;
         list-style-type: none;
 
+        @include desktop {
+            gap: 2rem;
+        }
+
         @include tablet-only {
             display: none;
         }

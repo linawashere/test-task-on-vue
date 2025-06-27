@@ -3,35 +3,35 @@ $desktop: 1440px;
 $tablet: 768px;
 $mobile: 320px;
 
-$from-desktop-lg: $desktop-lg + 1px;
-$from-desktop: $desktop + 1px;
-$from-tablet: $tablet + 1px;
-$from-mobile: $mobile + 1px;
+$desktop-max: 1919px;
+$tablet-max: 1439px;
+$mobile-max: 767px;
 
-$to-desktop-lg: $desktop-lg - 1px;
-$to-desktop: $desktop - 1px;
-$to-tablet: $tablet - 1px;
+$from-desktop-lg: $desktop-lg;
+$from-desktop: $desktop;
+$from-tablet: $tablet;
+$from-mobile: $mobile;
 
 @mixin desktop-lg {
-  @media (max-width: $desktop-lg) {
+  @media (min-width: $from-desktop-lg) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (max-width: $desktop) {
+  @media (min-width: $from-desktop) and (max-width: $desktop-max) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: $tablet) {
+  @media (min-width: $from-tablet) and (max-width: $tablet-max) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: $mobile) {
+  @media (min-width: $from-mobile) and (max-width: $mobile-max) {
     @content;
   }
 }
@@ -61,19 +61,38 @@ $to-tablet: $tablet - 1px;
 }
 
 @mixin desktop-only {
-  @media (min-width: $desktop) and (max-width: $to-desktop-lg) {
+  @media (min-width: $from-desktop) and (max-width: $desktop-max) {
     @content;
   }
 }
 
 @mixin tablet-only {
-  @media (min-width: $tablet) and (max-width: $to-desktop) {
+  @media (min-width: $from-tablet) and (max-width: $tablet-max) {
     @content;
   }
 }
 
 @mixin mobile-only {
-  @media (max-width: $to-tablet) {
+  @media (max-width: $mobile-max) {
+    @content;
+  }
+}
+
+// для максимальных значений
+@mixin upto-desktop-lg {
+  @media (max-width: $desktop-max) {
+    @content;
+  }
+}
+
+@mixin upto-desktop {
+  @media (max-width: $tablet-max) {
+    @content;
+  }
+}
+
+@mixin upto-tablet {
+  @media (max-width: $mobile-max) {
     @content;
   }
 }

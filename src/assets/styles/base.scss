@@ -14,7 +14,15 @@ html {
         font-size: calc(10px + 4 * (100vw - 768px) / 255);
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px) and (max-width: 1439px) {
         font-size: calc(8px + 2 * (100vw - 1024px) / (1440 - 1024));
+    }
+
+    @media (min-width: 1440px) and (max-width: 1919px) {
+        font-size: 10px;
+    }
+
+    @media (min-width: 1920px) {
+        font-size: 10px;
     }
 }
