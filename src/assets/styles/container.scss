@@ -1,0 +1,18 @@
+@import '@/assets/styles/breakpoints.scss';
+
+.container {
+    width: 1720px;
+    margin: 0 auto;
+
+    @include desktop-only {
+        width: 1280px;
+    }
+
+    @include tablet-only {
+        width: 688px;
+    }
+
+    @include mobile-only {
+        width: 290px;
+    }
+}
