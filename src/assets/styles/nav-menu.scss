@@ -1,0 +1,26 @@
+@import './typography.scss';
+@import './breakpoints.scss';
+
+.header__nav {
+    @include text-body-regular-m;
+
+    .header__nav-list {
+        display: flex;
+        gap: 4rem;
+        list-style-type: none;
+
+        @include tablet-only {
+            display: none;
+        }
+
+        @include mobile-only {
+            display: none;
+        }
+
+        .header__nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+}
