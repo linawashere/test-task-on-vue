@@ -7,7 +7,9 @@ interface Props {
     | 'primary-black'
     | 'primary-light'
     | 'secondary-black'
-    | 'secondary-light',
+    | 'secondary-light'
+    | 'phone-btn'
+    | 'burger-btn',
     size?: 'sm' | 'lg',
     disabled?: boolean
 }
