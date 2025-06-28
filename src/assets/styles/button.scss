@@ -38,7 +38,7 @@
             background: var(--accent-primary-hover);
         }
     }
-    
+
     &.secondary-light {
         border: 1px solid var(--stroke-dark-25);
         color: var(--text-light-primary);
@@ -53,5 +53,29 @@
 
     &.secondary-black {
         border: 1px solid var(--stroke-light-25);
+    }
+
+    // для burger-кнопкок и phone
+    &.burger-btn,
+    &.phone-btn {
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 0.6rem;
+        display: flex;
+        align-items: center;
+
+        @include from-desktop {
+            display: none;
+        }
+    }
+
+    &.phone-btn {
+        background: var(--accent-primary-hover);
+        padding: 1.3rem 1.2rem 1.1rem 1.2rem;
+    }
+
+    &.burger-btn {
+        background: var(--bg-light-white);
+        padding: 1.2rem;
     }
 }
