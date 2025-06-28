@@ -4,7 +4,8 @@
     @include text-btn-m;
     display: flex;
     align-items: center;
-    border-radius: 1.6rem;
+    justify-content: center;
+    border-radius: 0.8rem;
     transition: all 0.3s ease;
 
     &.size-lg {
