@@ -11,10 +11,32 @@
     left: 0;
     color: var(--text-light-secondary);
 
+    @include desktop {
+        height: 6.6rem;
+    }
+
+    @include tablet {
+        height: auto;
+        padding: 0 4rem;
+    }
+
+    @include mobile {
+        height: auto;
+        padding: 0 1.5rem;
+    }
+
     .header__container {
         display: flex;
         align-items: center;
-        justify-content: space-between
+        justify-content: space-between;
+
+        @include tablet {
+            padding: 1.5rem 0;
+        }
+
+        @include mobile {
+            padding: 1.5rem 0;
+        }
     }
 
     .header__logo-description {
@@ -62,6 +84,7 @@
         @include desktop {
             gap: 2.5rem;
         }
+
         @include tablet {
             gap: 2rem;
         }
@@ -87,6 +110,7 @@
         @include desktop {
             gap: 1.5rem;
         }
+
         @include tablet {
             gap: 1.5rem;
         }
