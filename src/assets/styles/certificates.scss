@@ -1,0 +1,184 @@
+@import './breakpoints.scss';
+@import './typography.scss';
+
+.certificates-section {
+    .certificate-card {
+        width: 56rem;
+        border: 1px solid var(--stroke-dark-25);
+        border-radius: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            display: none;
+        }
+
+        @include desktop {
+            padding: 3rem;
+        }
+
+        @include tablet {
+            padding: 2.5rem;
+
+            .swiper-slide.swiper-slide-active {
+                width: 33.4rem;
+            }
+        }
+
+        @include mobile {}
+
+        &:hover {
+            @include from-desktop {
+                background: var(--accent-primary-hover);
+
+                .icon-right {
+                    transform: rotate(45deg);
+                    transition: transform 0.3s ease;
+                }
+
+                .certificate-card__icon {
+                    display: none;
+                }
+
+                .certificate-card__img {
+                    width: 20.6rem;
+                    height: 36.8rem;
+                    display: block;
+                    position: absolute;
+                    border-radius: 1.6rem;
+                    right: -2.5rem;
+                    top: 1.5rem;
+
+                    @include desktop {
+                        width: 17.2rem;
+                        height: 24.2rem;
+                        right: -6.5rem;
+                        top: 6rem;
+                    }
+                }
+            }
+        }
+
+        @include desktop {
+            width: 41.3rem;
+        }
+
+        @include tablet {
+            width: 33.4rem;
+        }
+
+        @include mobile {
+            width: 29rem;
+        }
+    }
+
+    .certificate-card__content {
+        @include text-title-m;
+        display: flex;
+        gap: 3rem;
+        align-items: flex-end;
+
+        @include tablet {
+            gap: 2rem;
+        }
+
+        @include mobile {
+            gap: 3rem;
+        }
+
+        .certificate-card__text {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 3rem;
+            flex: 1;
+
+            .button {
+                width: fit-content;
+                border: none;
+            }
+        }
+
+        &-title {
+            width: 30rem;
+
+            @include desktop {
+                width: 22.8rem;
+            }
+
+            @include tablet {
+                width: 23.2rem;
+            }
+        }
+    }
+
+    &.button {
+        background: transparent;
+    }
+
+    .certificates-section__title {
+        display: flex;
+        justify-content: space-between;
+
+        .certificates-section__title-btns {
+            display: flex;
+            gap: 2rem;
+        }
+
+        @include from-desktop {
+            .certificates-section__navigation {
+                width: 12rem;
+                height: 6rem;
+                display: flex;
+                border-radius: 0.8rem;
+                gap: 1.5rem;
+                border: 1px solid var(--stroke-dark-25);
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                padding: 1.5rem;
+
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: 1rem;
+                    background-color: var(--stroke-dark-15);
+                    position: absolute;
+                    top: 0;
+                }
+
+                &::before {
+                    content: '';
+                    width: 1px;
+                    height: 1rem;
+                    background-color: var(--stroke-dark-15);
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                @include desktop {
+                    width: 9rem;
+                    height: 5rem;
+                    padding: 1.5rem 1rem;
+                }
+
+                .certificates-section__navigation-button--prev {
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: url('/next-icon.png');
+                }
+
+                .certificates-section__navigation-button--next {
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: url('/prev-icon.png');
+                }
+            }
+        }
+    }
+}
