@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^6.0.5",
+    "@formkit/vue": "^1.6.9",
     "gsap": "^3.13.0",
     "sass": "^1.89.2",
     "swiper": "^11.2.9",
