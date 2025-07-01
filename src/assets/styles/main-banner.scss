@@ -18,11 +18,24 @@
     z-index: 10;
     justify-content: space-between;
 
+    @include desktop {
+        padding: 10rem 8rem 4rem 8rem;
+        gap: 1rem;
+    }
+
+    @include tablet {
+        padding: 6rem 4rem 7rem 4rem;
+    }
+
     &__info {
         display: flex;
         flex-direction: column;
         gap: 4.5rem;
         width: 85rem;
+
+        @include tablet {
+            width: 69.8rem;
+        }
 
         &-text {
             display: flex;
@@ -30,6 +43,15 @@
             flex-direction: column;
             color: var(--text-light-primary);
             user-select: none;
+
+            @include desktop {
+                width: 63rem;
+            }
+
+            @include tablet {
+                width: 45.2rem;
+                gap: 2rem;
+            }
 
             .main-banner__description {
                 width: 56rem;
@@ -45,8 +67,18 @@
             width: fit-content;
             gap: 1.5rem;
 
+            @include desktop {
+                gap: 0.5rem;
+            }
+
             @include mobile {
                 flex-direction: column;
+            }
+
+            .button.size-lg {
+                @include desktop {
+                    height: 5rem;
+                }
             }
         }
     }
@@ -81,11 +113,50 @@
 
             .button {
                 height: 5rem;
+                margin-top: 0;
             }
         }
 
-        @include upto-desktop {
-            display: none;
+        @include tablet {
+            width: 68.8rem;
+            height: auto;
+            padding: 3rem;
+            gap: 2.5rem;
+            position: absolute;
+            left: 4rem;
+            bottom: -38rem;
+
+            .formkit-form {
+                .form__top {
+                    display: flex;
+                    gap: 2rem;
+
+                    .formkit-outer {
+                        flex: 1;
+                    }
+
+                    .formkit-inner {
+                        .formkit-input {
+                            height: 5rem;
+                        }
+                    }
+                }
+
+                .form__bottom {
+                    display: flex;
+                    align-items: center;
+
+                    .formkit-outer {
+                        flex: 1;
+                        margin-bottom: 0;
+                    }
+
+                    .button {
+                        margin-top: 0;
+                        width: auto;
+                    }
+                }
+            }
         }
 
         .formkit-form {
@@ -94,10 +165,14 @@
             gap: 1rem;
 
             @include desktop {
-                gap: 2.5rem;
+                gap: 0rem;
             }
 
             .button {
+                @include desktop {
+                    margin-top: 2rem;
+                }
+
                 width: 21.4rem;
             }
         }
@@ -141,6 +216,12 @@
 
     .formkit-inner {
         border-radius: 0.8rem;
+    }
+
+    .terms-checkbox {
+        @include desktop {
+            margin-bottom: 0rem;
+        }
     }
 
     .formkit-input[type=checkbox]:checked+.formkit-decorator {

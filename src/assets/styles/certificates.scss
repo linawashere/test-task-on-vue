@@ -18,6 +18,10 @@
             display: none;
         }
 
+        &__icon {
+            height: 5rem;
+        }
+
         @include desktop {
             padding: 3rem;
         }
@@ -95,12 +99,15 @@
             display: flex;
             justify-content: space-between;
             flex-direction: column;
-            gap: 3rem;
+            gap: 4rem;
             flex: 1;
 
             .button {
                 width: fit-content;
                 border: none;
+                height: auto;
+                padding: 0;
+                gap: 1rem;
             }
         }
 
@@ -125,18 +132,21 @@
         }
     }
 
-
-
     .certificates-section__title {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 6rem;
 
         .certificates-section__title-btns {
             display: flex;
             gap: 2rem;
-            
+
             &.button {
                 background: transparent;
+
+                .icon-right {
+                    margin-top: 2rem;
+                }
 
                 @include desktop {
                     height: 5rem;

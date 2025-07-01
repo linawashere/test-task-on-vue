@@ -12,6 +12,7 @@
 
         @include desktop {
             gap: 2rem;
+            margin-left: 0;
         }
 
         @include tablet-only {
