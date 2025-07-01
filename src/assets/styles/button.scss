@@ -8,6 +8,18 @@
     border-radius: 0.8rem;
     transition: all 0.3s ease;
 
+    &:hover {
+        .icon-right {
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .icon-right {
+        transition: transform 0.3s ease;
+        margin-top: 2rem;
+    }
+
     &.size-lg {
         gap: 3rem;
         padding: 0.8rem 1.5rem 1.5rem 0.8rem;
@@ -24,10 +36,10 @@
         background: var(--accent-primary-default);
         color: var(--text-light-primary);
 
-        // &:hover,
-        // &:active {
-        //     background: var(--accent-primary-hover);
-        // }
+        &:hover,
+        &:active {
+            background: var(--accent-primary-hover);
+        }
     }
 
     &.primary-light {
@@ -53,7 +65,7 @@
     }
 
     &.secondary-black {
-        border: 1px solid var(--stroke-light-25);
+        border: 1px solid var(--stroke-dark-25);
     }
 
     // для burger-кнопкок и phone

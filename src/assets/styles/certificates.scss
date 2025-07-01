@@ -106,20 +106,26 @@
 
         &-title {
             width: 30rem;
+            margin-bottom: 6rem;
 
             @include desktop {
                 width: 22.8rem;
+                margin-bottom: 5rem;
             }
 
             @include tablet {
                 width: 23.2rem;
+                margin-bottom: 4.5rem;
             }
+
+            @include mobile {
+                margin-bottom: 2.5rem;
+            }
+
         }
     }
 
-    &.button {
-        background: transparent;
-    }
+
 
     .certificates-section__title {
         display: flex;
@@ -128,6 +134,14 @@
         .certificates-section__title-btns {
             display: flex;
             gap: 2rem;
+            
+            &.button {
+                background: transparent;
+
+                @include desktop {
+                    height: 5rem;
+                }
+            }
         }
 
         @include from-desktop {

@@ -1,11 +1,11 @@
 .slider {
     width: 100%;
     margin: 0 auto;
+    position: absolute;
 
     &__image {
         width: 100%;
         height: calc(100vh - 8rem);
         object-fit: cover;
-        
     }
 }

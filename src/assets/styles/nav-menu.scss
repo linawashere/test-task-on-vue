@@ -7,6 +7,7 @@
     .header__nav-list {
         display: flex;
         gap: 4rem;
+        margin-left: 3rem;
         list-style-type: none;
 
         @include desktop {
