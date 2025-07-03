@@ -1,9 +1,10 @@
 @import './typography.scss';
+@import './breakpoints.scss';
 
 .button {
     @include text-btn-m;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     border-radius: 0.8rem;
     transition: all 0.3s ease;
@@ -14,7 +15,20 @@
     @include upto-desktop-lg {
         gap: 2rem;
         padding: 0.5rem 1.5rem 1rem 1.5rem;
+    }
+
+    @include desktop {
         height: 5rem;
+    }
+
+    @include tablet {
+        height: 5rem;
+    }
+
+    @include mobile {
+        font-size: 1.8rem;
+        padding-left: 2rem;
+        gap: 2.2rem;
     }
 
     &:hover {
@@ -27,8 +41,9 @@
     .icon-right {
         transition: transform 0.3s ease;
         margin-top: 2rem;
+        align-self: flex-end;
     }
-    
+
 
     &.primary-black {
         background: var(--accent-primary-default);
@@ -71,9 +86,14 @@
     &.phone-btn {
         width: 4.4rem;
         height: 4.4rem;
-        border-radius: 0.6rem;
+        border-radius: 0.8rem;
         display: flex;
         align-items: center;
+
+        @include mobile {
+            width: 5.35rem;
+            height: 5.35rem;
+        }
 
         @include from-desktop {
             display: none;

@@ -48,6 +48,14 @@
             gap: 1.5rem;
         }
 
+        @include tablet {
+            gap: 2.5rem;
+        }
+
+        @include mobile {
+            margin-top: 0.3rem;
+        }
+
         .header__logo-description__dealer-info {
             width: 16rem;
             display: flex;
@@ -75,6 +83,15 @@
         @include desktop {
             width: 12rem;
         }
+
+        @include tablet {
+            gap: 1.2rem;
+        }
+
+        @include mobile {
+            gap: 1.5rem;
+            letter-spacing: 0.3rem;
+        }
     }
 
     .header__info {
@@ -87,6 +104,10 @@
 
         @include tablet {
             gap: 2rem;
+        }
+
+        @include mobile {
+            gap: 0rem;
         }
     }
 

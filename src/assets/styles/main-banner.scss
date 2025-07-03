@@ -27,6 +27,10 @@
         padding: 6rem 4rem 7rem 4rem;
     }
 
+    @include mobile {
+        padding: 3rem 1.5rem 7rem 1.5rem;
+    }
+
     &__info {
         display: flex;
         flex-direction: column;
@@ -35,6 +39,13 @@
 
         @include tablet {
             width: 69.8rem;
+            gap: 3.6rem;
+        }
+
+        @include mobile {
+            // width: 29rem;
+            letter-spacing: 0.275rem;
+            gap: 3rem;
         }
 
         &-text {
@@ -53,11 +64,31 @@
                 gap: 2rem;
             }
 
+            @include mobile {
+                gap: 2rem;
+            }
+
+            .main-banner__title {
+                @include mobile {
+                    margin-top: 1rem;
+                    margin-left: 0.5rem;
+                    width: auto;
+                    line-height: 3.5rem;
+                }
+            }
+
             .main-banner__description {
                 width: 56rem;
 
                 @include desktop {
                     width: 41.3rem;
+                }
+
+                @include mobile {
+                    width: auto;
+                    margin-left: 0.3rem;
+                    line-height: 2.45rem;
+                    letter-spacing: 0.14rem;
                 }
             }
         }
@@ -71,8 +102,13 @@
                 gap: 0.5rem;
             }
 
+            @include tablet {
+                gap: 1rem;
+            }
+
             @include mobile {
                 flex-direction: column;
+                gap: 1rem;
             }
 
             .button.size-lg {
@@ -124,7 +160,7 @@
             gap: 2.5rem;
             position: absolute;
             left: 4rem;
-            bottom: -38rem;
+            bottom: 30rem;
 
             .formkit-form {
                 .form__top {
@@ -159,6 +195,18 @@
             }
         }
 
+        @include mobile {
+            position: absolute;
+            width: 29rem;
+            max-width: 29rem;
+            min-width: 290px;
+            height: auto;
+            gap: 4rem;
+            padding: 2rem;
+            left: 2rem;
+            bottom: -62rem;
+        }
+
         .formkit-form {
             display: flex;
             flex-direction: column;
@@ -172,8 +220,11 @@
                 @include desktop {
                     margin-top: 2rem;
                 }
-
                 width: 21.4rem;
+            }
+
+            @include mobile {
+                gap: 2rem;
             }
         }
 
@@ -232,6 +283,11 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
         box-shadow: none;
+
+        @include upto-desktop-lg {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
 
         .formkit-icon {
             background-color: var(--accent-primary-default);
