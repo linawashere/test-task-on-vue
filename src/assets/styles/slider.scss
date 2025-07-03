@@ -22,4 +22,142 @@
             height: 53rem;
         }
     }
+
+    .controls-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 6rem;
+        width: 100%;
+        height: 6rem;
+        position: absolute;
+        bottom: 3rem;
+        z-index: 10;
+        padding: 0 10rem;
+
+        @include desktop {
+            height: 5rem;
+            padding: 0 8rem;
+        }
+
+        @include tablet {
+            height: 5rem;
+            padding: 0 4rem;
+            bottom: 7rem;
+        }
+
+        @include mobile {
+            height: 5rem;
+            padding: 0 1.5rem;
+            bottom: 8rem;
+            gap: 2rem;
+        }
+
+        .navigation-buttons {
+            width: 12rem;
+            height: 6rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            position: relative;
+            border-radius: 0.8rem;
+            border: 1px solid var(--stroke-light-25);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+
+            @include desktop {
+                width: 9rem;
+                height: 5rem;
+                margin-bottom: 1rem;
+            }
+
+            @include tablet {
+                width: 9rem;
+                height: 5rem;
+                margin-bottom: 1rem;
+            }
+
+            @include mobile {
+                width: 9rem;
+                height: 5rem;
+                margin-bottom: 1rem;
+            }
+
+            &::before {
+                content: '';
+                width: 1px;
+                height: 1rem;
+                background: var(--stroke-light-15);
+                position: absolute;
+                left: 50%;
+            }
+
+            &::after {
+                content: '';
+                width: 1px;
+                height: 1rem;
+                background: var(--stroke-light-15);
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+            }
+
+            button {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+
+            .custom-prev {
+                right: 1.5rem;
+                position: absolute;
+                color: var(--text-light-primary);
+            }
+
+            .custom-next {
+                left: 1.5rem;
+                position: absolute;
+                color: var(--text-light-primary);
+            }
+        }
+
+        .swiper-pagination {
+            width: 154rem;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+
+            @include desktop {
+                width: 113rem;
+            }
+
+            @include tablet {
+                width: 53.8rem;
+            }
+
+            @include mobile {
+                width: 18rem;
+                flex: 1;
+                gap: 1rem;
+            }
+
+            .swiper-pagination-bullet {
+                flex: 1;
+                height: 2px;
+                background: var(--stroke-light-25);
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &-active {
+                    background: var(--stroke-light-100);
+                }
+            }
+        }
+    }
 }
