@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 interface Props {
-    type: "rightIcon" | "fi-rr-angle-small-down" | "fi-rr-heart" | "fi-rr-stats" | "fi-rr-call-outgoing",
+    type: "rightIcon" | "fi-rr-angle-small-down" | "fi-rr-heart" | "fi-rr-stats" | "fi-rr-call-outgoing" | "fi-rr-menu-burger" | "fi-rr-cross-small",
     color?: string
 }
 
