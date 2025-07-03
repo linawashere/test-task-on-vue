@@ -3,6 +3,7 @@ import { defineProps } from 'vue';
 
 interface Props {
     tagName: 'p' | 'h1' | 'h2' | 'span';
+    variant?: string;
 }
 
 const props = defineProps<Props>();
