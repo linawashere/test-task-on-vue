@@ -38,14 +38,14 @@ const certificates = [
                         <template v-slot:rightIcon>
                             <Icon type="rightIcon" />
                         </template>
-                        Все услуги
+                        Все сертификаты
                     </Button>
                 </div>
             </div>
 
             <Swiper :modules="[EffectFade, Pagination, Navigation]" :slides-per-view="3" :space-between="20"
                 :breakpoints="{
-                    1440: {
+                    1920: {
                         slidesPerView: 3,
                         spaceBetween: 20,
                     },

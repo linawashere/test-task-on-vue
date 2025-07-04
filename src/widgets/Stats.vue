@@ -3,9 +3,11 @@ import Icon from '@/shared/btn-icon/index.vue'
 
 interface Props {
     data: {
-        icon: string;
+        icon: 
+        | "fi-rr-heart"
+        | "fi-rr-stats";
         count: number;
-    }[]
+    }[];
 }
 
 const { data } = defineProps<Props>();
