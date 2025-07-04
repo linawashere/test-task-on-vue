@@ -5,8 +5,11 @@ import Icon from '@/shared/btn-icon/index.vue'
 interface Props {
     data: {
         text: string;
-        icon: string;
-    }[]
+        icon:
+        | "fi-rr-angle-small-down"
+        | "fi-rr-menu-burger"
+        | "fi-rr-cross-small";
+    }[];
 }
 
 const { data } = defineProps<Props>();
