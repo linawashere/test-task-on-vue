@@ -26,10 +26,8 @@ const handleSubmit = (formData: FormData) => {
             <FormKit type="tel" name="phone" label="Телефон" validation="required|length:10"
                 placeholder="+7 (___) ___-__-__" />
         </div>
-
-        <FormKit type="checkbox" name="acceptTerms" label="Я принимаю условия" validation="required">
-            <span class="text-body-regular-s"> передачи информации</span>
-        </FormKit>
+        <div class="form__bottom">
+        <FormKit type="checkbox" name="acceptTerms" label="Я принимаю условия передачи информации" validation="required" outer-class="terms-checkbox"/>
 
         <Button type="primary-black">
             <template v-slot:rightIcon>
@@ -37,5 +35,6 @@ const handleSubmit = (formData: FormData) => {
             </template>
             Оставить заявку
         </Button>
+    </div>
     </FormKit>
 </template>
