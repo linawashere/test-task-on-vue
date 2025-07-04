@@ -57,6 +57,10 @@
             margin-top: 0.3rem;
         }
 
+        &__company-name {
+            color: var(--text-light-primary);
+        }
+
         .header__logo-description__dealer-info {
             width: 16rem;
             display: flex;
@@ -115,6 +119,12 @@
     .header__info-contacts {
         display: flex;
         gap: 4rem;
+        color: var(--text-light-primary);
+
+        .header__phone-link {
+            text-decoration: none;
+            color: var(--text-light-primary);
+        }
 
         @include desktop {
             gap: 3rem;
