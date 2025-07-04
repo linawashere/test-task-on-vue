@@ -3,6 +3,7 @@
 
 .header__nav {
     @include text-body-regular-m;
+    color: var(--text-light-primary);
 
     .header__nav-list {
         display: flex;
