@@ -20,7 +20,7 @@ const props = defineProps<{
             <div class="certificate-card__text">
                 <Typography tagName="p" class="text-title-m certificate-card__content-title">{{ certificate.title }}
                 </Typography>
-                <Button @click="openCertificate" type="secondary-black">
+                <Button type="secondary-black">
                     <template v-slot:rightIcon>
                         <Icon type="rightIcon" />
                     </template>
