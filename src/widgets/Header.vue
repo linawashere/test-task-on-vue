@@ -8,17 +8,22 @@ import Button from '@/shared/button/index.vue'
 import Icon from '@/shared/btn-icon/index.vue'
 import { reactive } from 'vue'
 
+type InfoItem = {
+    icon: "fi-rr-heart" | "fi-rr-stats";
+    count: number;
+};
+
 const navItems = reactive([
-    { text: 'Модельный ряд', icon: 'fi-rr-angle-small-down' },
-    { text: 'Покупка', icon: 'fi-rr-angle-small-down' },
-    { text: 'Сервис', icon: 'fi-rr-angle-small-down' },
-    { text: 'О нас', icon: 'fi-rr-angle-small-down' },
-    { text: 'Еще', icon: 'fi-rr-angle-small-down' },
+    { text: 'Модельный ряд', icon: 'fi-rr-angle-small-down' as const },
+    { text: 'Покупка', icon: 'fi-rr-angle-small-down' as const },
+    { text: 'Сервис', icon: 'fi-rr-angle-small-down' as const },
+    { text: 'О нас', icon: 'fi-rr-angle-small-down' as const },
+    { text: 'Еще', icon: 'fi-rr-angle-small-down' as const },
 ]);
 
-const infoItems = reactive([
-    { icon: 'fi-rr-heart', count: 22 },
-    { icon: 'fi-rr-stats', count: 22 },
+const infoItems: InfoItem[] = reactive([
+    { icon: 'fi-rr-heart' as const, count: 22 },
+    { icon: 'fi-rr-stats' as const, count: 22 },
 ]);
 
 </script>
@@ -49,8 +54,10 @@ const infoItems = reactive([
                     <Typography tagName="p" class="text-body-regular-m header__info-contacts__address">г. Москва, ул.
                         Космонавтиков,
                         д. 6</Typography>
-                    <Typography tagName="p" class="text-body-medium-m header__info-contacts__tel">+7 (495) 434-03-26
-                    </Typography>
+                    <a href="tel:+74954340326" class="header__phone-link">
+                        <Typography tagName="p" class="text-body-medium-m header__info-contacts__tel">+7 (495) 434-03-26
+                        </Typography>
+                    </a>
                 </div>
                 <div class="header__info-stats">
                     <Stats :data="infoItems" />
