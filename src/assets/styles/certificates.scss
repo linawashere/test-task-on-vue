@@ -2,6 +2,20 @@
 @import './typography.scss';
 
 .certificates-section {
+    padding: 0 10rem 16rem 10rem;
+
+    @include desktop {
+        padding: 0 8rem 14rem 8rem;
+    }
+
+    @include tablet {
+        padding: 0 4rem 7rem 4rem;
+    }
+
+    @include mobile {
+        padding: 0 4rem 7rem 4rem;
+    }
+
     .certificate-card {
         width: 56rem;
         border: 1px solid var(--stroke-dark-25);
@@ -10,9 +24,10 @@
         flex-direction: column;
         padding: 4rem;
         justify-content: space-between;
-        transition: all 0.3s ease;
+        transition: all 1s ease;
         position: relative;
         overflow: hidden;
+        user-select: none;
 
         img {
             display: none;
@@ -34,15 +49,12 @@
             }
         }
 
-        @include mobile {}
-
         &:hover {
             @include from-desktop {
                 background: var(--accent-primary-hover);
 
                 .icon-right {
-                    transform: rotate(45deg);
-                    transition: transform 0.3s ease;
+                    display: none;
                 }
 
                 .certificate-card__icon {
@@ -54,6 +66,7 @@
                     height: 36.8rem;
                     display: block;
                     position: absolute;
+                    animation: fadeIn 1s ease;
                     border-radius: 1.6rem;
                     right: -2.5rem;
                     top: 1.5rem;
@@ -63,6 +76,18 @@
                         height: 24.2rem;
                         right: -6.5rem;
                         top: 6rem;
+                    }
+                }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
                     }
                 }
             }
@@ -108,6 +133,15 @@
                 height: auto;
                 padding: 0;
                 gap: 1rem;
+
+                &:hover {
+                    background: transparent;
+                    color: inherit;
+                }
+
+                .icon-right {
+                    align-self: auto;
+                }
             }
         }
 

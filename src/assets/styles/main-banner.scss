@@ -5,6 +5,18 @@
     position: relative;
     height: calc(100vh - 8rem);
     z-index: 1;
+
+    @include desktop {
+        height: calc(100vh - 6.6rem);
+    }
+
+    @include tablet {
+        height: calc(100vh - 7.4rem);
+    }
+
+    @include mobile {
+        height: calc(100vh - 7.4rem);
+    }
 }
 
 .main-banner {
@@ -20,6 +32,7 @@
 
     @include desktop {
         padding: 10rem 8rem 4rem 8rem;
+        height: calc(100vh - 6.6rem);
         gap: 1rem;
     }
 
