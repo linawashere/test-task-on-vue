@@ -127,6 +127,16 @@
         z-index: 10;
     }
 
+    .form__bottom {
+        @include text-body-regular-m;
+    }
+
+    .custom-link {
+        @include text-body-regular-s;
+        text-decoration: underline;
+        color: var(--text-dark-primary);
+    }
+
     &__form {
         width: 41.5rem;
         height: 55.4rem;
@@ -180,7 +190,6 @@
                 }
 
                 .form__bottom {
-                    @include text-body-regular-m;
                     display: flex;
                     align-items: center;
 
@@ -192,12 +201,6 @@
                     .button {
                         margin-top: 0;
                         width: auto;
-                    }
-
-                    .custom-link {
-                        @include text-body-regular-s;
-                        text-decoration: underline;
-                        color: var(--text-dark-primary);
                     }
                 }
             }
