@@ -78,6 +78,12 @@
 
     &.secondary-black {
         border: 1px solid var(--stroke-dark-25);
+
+        &:hover,
+        &:active {
+            color: var(--text-light-primary);
+            background: var(--accent-primary-default);
+        }
     }
 
     // для burger-кнопкок и phone
