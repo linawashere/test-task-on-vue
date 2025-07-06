@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import 'swiper/scss'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { ref } from 'vue'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 
 interface Props {
   slides: { image: string; alt: string }[];
