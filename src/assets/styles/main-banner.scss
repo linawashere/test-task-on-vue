@@ -180,6 +180,7 @@
                 }
 
                 .form__bottom {
+                    @include text-body-regular-m;
                     display: flex;
                     align-items: center;
 
@@ -191,6 +192,12 @@
                     .button {
                         margin-top: 0;
                         width: auto;
+                    }
+
+                    .custom-link {
+                        @include text-body-regular-s;
+                        text-decoration: underline;
+                        color: var(--text-dark-primary);
                     }
                 }
             }
@@ -354,6 +361,7 @@
         height: 2.4rem;
         border-radius: 0.8rem;
         width: 2.4rem;
+        cursor: pointer;
     }
 
     .formkit-decorator-icon {

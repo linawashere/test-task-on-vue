@@ -46,10 +46,16 @@ interface FormData {
                 }" />
         </div>
         <div class="form__bottom">
-            <FormKit type="checkbox" name="acceptTerms" label="Я принимаю условия передачи информации"
-                :validation-messages="{
-                    required: 'Поле обязательно для заполнения'
-                }" validation="required" outer-class="terms-checkbox" />
+            <FormKit type="checkbox" name="acceptTerms" :validation-messages="{
+                required: 'Поле обязательно для заполнения'
+            }" validation="required" outer-class="terms-checkbox">
+                <template #label>
+                    <div>
+                    Я принимаю
+                    <a href="#" class="custom-link">условия передачи информации</a>
+                </div>
+                </template>
+            </FormKit>
 
             <Button type="primary-black">
                 <template v-slot:rightIcon>
