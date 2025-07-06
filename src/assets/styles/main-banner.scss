@@ -226,6 +226,7 @@
                 @include desktop {
                     margin-top: 2rem;
                 }
+
                 width: 21.4rem;
             }
 
@@ -267,23 +268,37 @@
         }
     }
 
+    .formkit-message,
+    .form-success-message {
+        @include text-error-field;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--text-dark-secondary);
+        padding: 1rem 1.5rem;
+        border: 1px solid var(--stroke-dark-10);
+        border-radius: 0.8rem;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .formkit-outer {
         margin-bottom: 2rem;
 
         span.formkit-label {
             @include text-body-regular-m;
             text-transform: inherit;
-        }
-
-        .formkit-message {
-            @include text-error-field;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: var(--text-dark-secondary);
-            padding: 1rem 1.5rem;
-            border: 1px solid var(--stroke-dark-10);
-            border-radius: 0.8rem;
         }
 
         .formkit-message::before {
