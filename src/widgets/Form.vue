@@ -31,7 +31,7 @@ interface FormData {
 
 <template>
     <FormKit ref="formRef" type="form" :actions="false" @submit="handleSubmit"
-        :form-class="isSubmit ? 'form-submitted' : ''">
+        :form-class="isSubmitted ? 'form-submitted' : ''">
         <div class="form__top">
             <FormKit type="text" name="name" label="Имя" validation="required" placeholder="Введите ваше имя"
                 :validation-messages="{

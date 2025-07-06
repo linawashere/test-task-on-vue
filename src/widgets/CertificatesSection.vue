@@ -66,6 +66,12 @@ const certificates = [
                     <CertificateCard :certificate="certificate" />
                 </SwiperSlide>
             </Swiper>
+            <Button type="secondary-black" class="certificate-mobile">
+                <template v-slot:rightIcon>
+                    <Icon type="rightIcon" />
+                </template>
+                Все сертификаты
+            </Button>
         </Container>
     </section>
 </template>
