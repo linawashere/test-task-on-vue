@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-// import { gsap } from 'gsap';
-// import { ref, onMounted } from 'vue';
 
 interface Props {
     type:
@@ -33,6 +31,6 @@ const buttonClasses = {
     </button>
 </template>
 
-<style scoped>
+<style>
 @import '@/assets/styles/button.scss';
 </style>
