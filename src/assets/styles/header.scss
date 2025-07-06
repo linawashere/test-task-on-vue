@@ -11,6 +11,11 @@
     left: 0;
     color: var(--text-light-secondary);
     z-index: 20;
+    transition: transform 0.3s ease;
+
+    &--hidden {
+        transform: translateY(-100%);
+    }
 
     @include desktop {
         height: 6.6rem;
@@ -39,6 +44,33 @@
             padding: 1.5rem 0;
         }
     }
+
+    .logo-descr {
+        display: none;
+    }
+
+    @include tablet {
+        .logo-descr {
+            display: flex;
+            gap: 1.4rem;
+
+            svg {
+                height: 2.6rem;
+            }
+        }
+    }
+
+    @include mobile {
+        .logo-descr {
+            display: flex;
+            gap: 1.4rem;
+
+            svg {
+                height: 2.6rem;
+            }
+        }
+    }
+
 
     .header__logo-description {
         display: flex;
@@ -91,11 +123,11 @@
         }
 
         @include tablet {
-            gap: 1.2rem;
+            gap: 2.4rem;
         }
 
         @include mobile {
-            gap: 1.5rem;
+            gap: 3rem;
             letter-spacing: 0.3rem;
         }
     }

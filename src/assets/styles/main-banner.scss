@@ -98,6 +98,10 @@
                     width: 41.3rem;
                 }
 
+                @include tablet {
+                    width: 100%;
+                }
+
                 @include mobile {
                     width: auto;
                     margin-left: 0.3rem;
@@ -148,6 +152,11 @@
         @include text-body-regular-s;
         text-decoration: underline;
         color: var(--text-dark-primary);
+
+        @include mobile {
+            @include text-body-regular-m;
+            font-size: 14px;
+        }
     }
 
     &__form {
@@ -228,7 +237,7 @@
             gap: 3rem;
             padding: 2rem;
             left: 2rem;
-            bottom: -45rem;
+            bottom: -44rem;
 
             p {
                 font-size: 16px;
@@ -269,6 +278,10 @@
 
             @include desktop {
                 height: 5rem;
+            }
+
+            @include tablet {
+                padding: 0 1.5rem;
             }
 
             &:hover {
@@ -348,7 +361,7 @@
         appearance: none;
         width: 2.4rem;
         height: 2.4rem;
-        border-radius: 0.8rem;
+        border-radius: 0.4rem;
         cursor: pointer;
         transition: background-color 0.3s ease;
         box-shadow: none;
@@ -361,7 +374,7 @@
         .formkit-icon {
             background-color: var(--accent-primary-default);
             color: var(--accent-secondary-default);
-            border-radius: 0.8rem;
+            border-radius: 0.4rem;
         }
 
         &:checked+.formkit-decorator {
@@ -374,10 +387,19 @@
     }
 
     [data-type=checkbox] .formkit-input~.formkit-decorator {
+        @include tablet {
+            margin-right: 0;
+        }
+
         height: 2.4rem;
-        border-radius: 0.8rem;
+        border-radius: 0.4rem;
         width: 2.4rem;
         cursor: pointer;
+
+        @include tablet {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
     }
 
     [data-type=checkbox] .formkit-inner {

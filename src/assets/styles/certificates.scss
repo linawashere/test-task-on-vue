@@ -13,7 +13,17 @@
     }
 
     @include mobile {
-        padding: 0 4rem 7rem 4rem;
+        padding: 0 1.5rem 5.5rem 1.5rem;
+    }
+
+    .certificate-mobile {
+        display: none;
+
+        @include mobile {
+            display: flex;
+        }
+
+        margin-top: 3rem;
     }
 
     .certificate-card {
@@ -33,12 +43,35 @@
             display: none;
         }
 
-        &__icon svg{
-            height: 5rem;
+        &__icon {
+            svg {
+                height: 5rem;
 
-            @include desktop {
-                width: 4rem;
-                height: 4rem;
+                @include desktop {
+                    width: 4rem;
+                    height: 4rem;
+                }
+
+                @include tablet {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                }
+
+                @include mobile {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            @include tablet {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+
+            @include mobile {
+                width: 24px;
+                height: 24px;
+                align-self: flex-start;
             }
         }
 
@@ -47,11 +80,17 @@
         }
 
         @include tablet {
-            padding: 2.5rem;
+            padding: 2rem;
 
             .swiper-slide.swiper-slide-active {
                 width: 33.4rem;
             }
+        }
+
+        @include mobile {
+            width: auto !important;
+            height: 200px;
+            padding: 2rem;
         }
 
         &:hover {
@@ -169,7 +208,8 @@
             }
 
             @include mobile {
-                margin-bottom: 2.5rem;
+                margin-bottom: 0.3rem;
+                width: 19.6rem;
             }
 
         }
@@ -182,6 +222,22 @@
 
         @include desktop {
             margin-bottom: 5rem;
+        }
+
+        @include tablet {
+            margin-bottom: 5rem;
+        }
+
+        @include mobile {
+            .button {
+                display: none;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            margin-bottom: 2.5rem;
         }
 
         .certificates-section__title-btns {
