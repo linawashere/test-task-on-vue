@@ -84,6 +84,7 @@
         display: flex;
         gap: 1.8rem;
         align-items: center;
+        cursor: pointer;
 
         @include desktop {
             width: 12rem;
@@ -138,6 +139,7 @@
     .header__info-stats {
         display: flex;
         gap: 2rem;
+        cursor: pointer;
 
         @include desktop {
             gap: 1.5rem;
