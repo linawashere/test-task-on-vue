@@ -33,8 +33,13 @@
             display: none;
         }
 
-        &__icon {
+        &__icon svg{
             height: 5rem;
+
+            @include desktop {
+                width: 4rem;
+                height: 4rem;
+            }
         }
 
         @include desktop {
@@ -109,16 +114,16 @@
     .certificate-card__content {
         @include text-title-m;
         display: flex;
-        gap: 3rem;
+        justify-content: space-between;
         align-items: flex-end;
 
-        @include tablet {
-            gap: 2rem;
-        }
+        // @include tablet {
+        //     gap: 2rem;
+        // }
 
-        @include mobile {
-            gap: 3rem;
-        }
+        // @include mobile {
+        //     gap: 3rem;
+        // }
 
         .certificate-card__text {
             display: flex;
@@ -126,6 +131,10 @@
             flex-direction: column;
             gap: 4rem;
             flex: 1;
+
+            @include desktop {
+                gap: 7rem;
+            }
 
             .button {
                 width: fit-content;
@@ -170,6 +179,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 6rem;
+
+        @include desktop {
+            margin-bottom: 5rem;
+        }
 
         .certificates-section__title-btns {
             display: flex;

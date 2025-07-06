@@ -161,7 +161,7 @@
         background: var(--bg-cta);
 
         .button {
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         @include desktop {
@@ -378,6 +378,10 @@
         border-radius: 0.8rem;
         width: 2.4rem;
         cursor: pointer;
+    }
+
+    [data-type=checkbox] .formkit-inner {
+        align-self: flex-start;
     }
 
     .formkit-decorator-icon {
