@@ -241,9 +241,14 @@
             border-radius: 0.8rem;
             height: 6rem;
             padding: 0 2rem;
+            transition: all 0.3s ease;
 
             @include desktop {
                 height: 5rem;
+            }
+
+            &:hover {
+                background: var(--bg-dark-10);
             }
         }
 
@@ -268,6 +273,26 @@
         span.formkit-label {
             @include text-body-regular-m;
             text-transform: inherit;
+        }
+
+        .formkit-message {
+            @include text-error-field;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-dark-secondary);
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--stroke-dark-10);
+            border-radius: 0.8rem;
+        }
+
+        .formkit-message::before {
+            content: '';
+            display: block;
+            background-image: url('/error.png');
+            width: 1.4rem;
+            height: 1.4rem;
+            background-repeat: no-repeat;
         }
     }
 
