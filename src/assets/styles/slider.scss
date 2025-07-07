@@ -155,9 +155,30 @@
                 cursor: pointer;
                 transition: all 0.3s ease;
                 border-radius: 0rem;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 0;
+                    background: var(--stroke-light-100);
+                    transition: width 4s linear;
+                }
 
                 &-active {
-                    background: var(--stroke-light-100);
+                    background: transparent;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                &:not(.swiper-pagination-bullet-active)::before {
+                    width: 0;
+                    transition: none;
                 }
             }
         }
