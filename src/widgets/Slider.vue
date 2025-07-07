@@ -15,8 +15,8 @@ const modules = [Navigation, Pagination, Autoplay];
 <template>
   <div class="slider">
     <Swiper :modules="modules" :navigation="{
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev'
     }" :pagination="{
       clickable: true,
       el: '.swiper-pagination',

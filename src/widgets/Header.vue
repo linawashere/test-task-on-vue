@@ -7,6 +7,9 @@ import Stats from '@/widgets/Stats.vue'
 import Button from '@/shared/button/index.vue'
 import Icon from '@/shared/btn-icon/index.vue'
 import { reactive } from 'vue'
+import { useHeaderScroll } from '@/shared/hooks/useHeaderScroll'
+
+const { isHeaderHidden } = useHeaderScroll()
 
 type InfoItem = {
     icon: "fi-rr-heart" | "fi-rr-stats";
@@ -28,7 +31,7 @@ const infoItems: InfoItem[] = reactive([
 
 </script>
 <template>
-    <header class="header">
+    <header class="header" :class="{ 'header--hidden': isHeaderHidden }">
         <Container class="header__container">
             <div class="header__logo-description">
                 <div class="header__company-logo">
@@ -37,10 +40,12 @@ const infoItems: InfoItem[] = reactive([
                             <Icon type="fi-rr-menu-burger" />
                         </template>
                     </Button>
-                    <Typography tagName="p" class="text-company-logo header__logo-description__company-name">
-                        Scamacca
-                    </Typography>
-                    <Logo />
+                    <div class="logo-descr">
+                        <Typography tagName="p" class="text-company-logo header__logo-description__company-name">
+                            Scamacca
+                        </Typography>
+                        <Logo />
+                    </div>
                 </div>
 
                 <Typography tagName="p" class="text-logo-description header__logo-description__dealer-info">
