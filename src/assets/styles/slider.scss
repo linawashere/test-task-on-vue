@@ -154,6 +154,7 @@
                 background: var(--stroke-light-25);
                 cursor: pointer;
                 transition: all 0.3s ease;
+                border-radius: 0rem;
 
                 &-active {
                     background: var(--stroke-light-100);
